@@ -17,7 +17,6 @@ class Product {
     this.description,
   });
 
-  // F.1: Method tambahan untuk status stok
   String getStatusStok() {
     if (stock > 10) return 'Tersedia Banyak';
     if (stock > 0) return 'Stok Terbatas';
@@ -37,7 +36,6 @@ class Product {
   }
 }
 
-// 2. Class Turunan (Inheritance) tetap dipertahankan untuk Langkah 5
 class DiscountedProduct extends Product {
   double discountPercent;
 
@@ -65,7 +63,6 @@ class DiscountedProduct extends Product {
   }
 }
 
-// F.3: Function menghitung total belanja
 double hitungTotalBelanja(List<Product> keranjang) {
   double total = 0;
   for (var produk in keranjang) {
@@ -79,7 +76,6 @@ double hitungTotalBelanja(List<Product> keranjang) {
 }
 
 void main() {
-  
   List<Product> daftarProduk = [
     DiscountedProduct(
       id: 'P01',
@@ -157,7 +153,7 @@ void main() {
   }
 
   print('\n--- Simulasi Keranjang Belanja ---');
-  // Memasukkan Laptop Axioo diskon, Trigger, dan Kemeja ke keranjang
+
   List<Product> keranjangBelanja = [
     daftarProduk[0],
     daftarProduk[1],
@@ -167,6 +163,6 @@ void main() {
   double total = hitungTotalBelanja(keranjangBelanja);
   print('Total belanja Anda: Rp${total.toInt()}');
 
-  // 4. Uji Null Safety (Hapus tanda komentar // di bawah ini untuk melihat error kompilasi)
+  // Uji safety
   // daftarProduk[1].name = null;
 }

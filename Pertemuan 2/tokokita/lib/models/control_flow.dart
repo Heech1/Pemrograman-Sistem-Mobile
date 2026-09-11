@@ -1,8 +1,7 @@
 void main() {
-  // 1. If-Else: Menentukan status produk berdasarkan stok
   int stokBarang = 5;
   String statusProduk;
-  
+
   if (stokBarang > 10) {
     statusProduk = 'Tersedia';
   } else if (stokBarang > 0) {
@@ -13,17 +12,17 @@ void main() {
   print('--- 1. Status Stok (If-Else) ---');
   print('Stok saat ini: $stokBarang -> Label: $statusProduk\n');
 
-  // 2. For Loop: Menjumlahkan total harga di keranjang belanja
   List<double> hargaKeranjang = [150000.0, 75000.0, 25000.0];
   double totalBelanja = 0;
-  
+
   for (int i = 0; i < hargaKeranjang.length; i++) {
     totalBelanja += hargaKeranjang[i];
   }
   print('--- 2. Total Belanja (For Loop) ---');
-  print('Total harga dari ${hargaKeranjang.length} barang adalah: Rp$totalBelanja\n');
+  print(
+    'Total harga dari ${hargaKeranjang.length} barang adalah: Rp$totalBelanja\n',
+  );
 
-  // 3. While Loop: Mensimulasikan pengurangan stok satu per satu
   int sisaStok = 3;
   print('--- 3. Pengurangan Stok (While Loop) ---');
   while (sisaStok > 0) {
@@ -32,7 +31,6 @@ void main() {
   }
   print('Peringatan: Stok barang sudah habis!\n');
 
-  // 4. Switch-Case: Menentukan besaran diskon berdasarkan kategori
   String kategoriProduk = 'Fashion';
   int persenDiskon;
 
